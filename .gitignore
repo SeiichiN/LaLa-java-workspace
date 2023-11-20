@@ -2,6 +2,10 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,eclipse
 
 ### Eclipse ###
+# ワークスペースの設定情報、サーバーの情報はインデックスに加えない。
+# プロジェクトの情報はインデックスに加える。
+# だから、"既存プロジェクトのインポート"が使える。
+#
 .metadata
 bin/
 tmp/
