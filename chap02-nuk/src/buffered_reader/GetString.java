@@ -18,7 +18,7 @@ public class GetString {
 		try {
 			str = br.readLine();
 		} catch (IOException e) {
-			throw new IllegalArgumentException("キーボードがおかしい");
+			throw new IllegalStateException("キーボードがおかしい");
 		}
 		return str;
 	}
