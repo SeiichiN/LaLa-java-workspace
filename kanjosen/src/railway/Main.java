@@ -13,10 +13,12 @@ public class Main {
 		// ekiList.remove("京橋");
 		// System.out.println(ekiList);
 
-		dispEki();
+		// selectEki();
+		System.out.println(ekiList);
+		System.out.println("駅の数: " + ekiList.size());
 	}
 	
-	private static void dispEki() {
+	private static void selectEki() {
 		System.out.println("表示したい駅名を入力");
 		String ekiKanji = new Scanner(System.in).nextLine();
 		Eki tgt = ekiList.get(ekiKanji);

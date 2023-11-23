@@ -1,8 +1,14 @@
 package railway;
 
 public class EkiList {
-	
-	Eki head = new Eki(null);
+	// 最初 EkiList のインスタンスを生成したときは、
+	// この head には、next も prev も null である
+	// Eki インスタンスが代入されている。
+	// しかし、EkiListがadd()コマンドにより生成されてのちは
+	// この head には、next には歳1番目の Eki インスタンスが
+	// 代入されている。
+	private Eki head = new Eki(null);
+	private int length = 0;
 	
 	public Eki get(String name) {
 		Eki eki = head;
@@ -26,6 +32,7 @@ public class EkiList {
 		Eki nextEki = eki.next;
 		eki.next = new Eki(name);
 		eki.next.next = nextEki;
+		this.length++;
 	}
 	
 	public void add(String name) {
@@ -36,8 +43,18 @@ public class EkiList {
 		Eki newEki = new Eki(name);
 		eki.next = newEki;
 		newEki.prev = eki;
+		this.length++;
 	}
 	
+	public int size() {
+		return this.length;
+	}
+	
+	/**
+	 * ekilist.add(福島) のあとで、ekilist.close("大阪") とすれば、
+	 * ekilistは閉じられる。
+	 * @param name
+	 */
 	public void close(String name) {
 		Eki eki = head;
 		while (eki.next != null) {
@@ -57,14 +74,17 @@ public class EkiList {
 		// System.out.println(eki.name);
 		Eki nextEki = eki.next.next;
 		eki.next = nextEki;
+		this.length--;
 	}
 	
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		Eki eki = head;
+		String headNextName = eki.next.name;
 		while(eki.next != null) {
 			eki = eki.next;
-			sb.append(eki.name + "\n");
+			sb.append(eki.name + " ");
+			if (eki.next.name.equals(headNextName)) break;
 		}
 		return sb.toString();
 	}
