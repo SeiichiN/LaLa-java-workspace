@@ -2,8 +2,10 @@ package jp.co.pana.main;
 
 public class Player {
 	int hand;
+	String name;
 	
-	public void setHand(int hand) {
-		this.hand = hand;
+	public Player() {}
+	public Player(String name) {
+		this.name = name;
 	}
 }
