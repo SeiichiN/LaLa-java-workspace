@@ -1,32 +1,45 @@
 package game;
 
+import java.util.Scanner;
+
 import util.CardUtil;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Card[] baseCards = new Card[52];
-		init(baseCards);
-		CardUtil cardUtil = new CardUtil();
-		Card[] cards = cardUtil.shuffleCard(baseCards);
-		for (Card card : cards) {
-			System.out.println(card);
+		Card[] cards = new Card[52];
+		CardUtil util = new CardUtil();
+		util.setup(cards);
+		
+		Player com = new Player("コム");
+		Player user = new Player("ユーザー");
+
+		int idx = 0;
+		com.card = cards[idx];
+		idx++;
+		user.card = cards[idx];
+		idx++;
+		
+		String yesno = dousuru(com);
+		if (yesno.equals("y")) {
+			user.card = cards[idx];
+			idx++;
 		}
+		
+		
+		com.judge(user);
+		user.judge(com);
+		System.out.println(com);
+		System.out.println(user);
 	}
 
-	public static void init(Card[] cards) {
-		final int SUIT_LEN = 13;
-		for (int i = 0; i < SUIT_LEN; i++) {
-			cards[i] = new Card("club", i+1);
-		}
-		for (int i = SUIT_LEN; i < SUIT_LEN * 2; i++) {
-			cards[i] = new Card("spade", i+1);
-		}
-		for (int i = SUIT_LEN * 2; i < SUIT_LEN * 3; i++) {
-			cards[i] = new Card("heart", i+1);
-		}
-		for (int i = SUIT_LEN * 3; i < SUIT_LEN * 4; i++) {
-			cards[i] = new Card("heart", i+1);
-		}
+	private static String dousuru(Player target) {
+		System.out.println("相手のカード:" + target.card);
+		String yesno = null;
+		do {
+			System.out.println("もう一枚カードをひきますか？ (y/n)");
+			yesno = new Scanner(System.in).nextLine().toLowerCase();
+		} while (!yesno.equals("y") && !yesno.equals("n"));
+		return yesno;
 	}
 }
