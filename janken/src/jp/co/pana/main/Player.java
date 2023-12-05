@@ -1,6 +1,6 @@
 package jp.co.pana.main;
 
-public class Player {
+public abstract class Player {
 	int hand;
 	String name;
 	
@@ -8,4 +8,6 @@ public class Player {
 	public Player(String name) {
 		this.name = name;
 	}
+	
+	abstract public void setHand();
 }

@@ -1,0 +1,21 @@
+プロジェクト birdland
+
+クラス
+birdクラス         親クラス  どういうメソッドを実装するか？
+マガモクラス       子クラス  ガアガアと鳴く、飛ぶ、泳げる
+アヒルクラス       子クラス  ガアガアと鳴く、飛べない、泳げる
+ゴム製アヒルクラス 子クラス  鳴かない、飛べない、泳げる
+ゴム製オモチャ   rubber to
+お風呂のオモチャ bath toy
+
+Mainクラス
+それぞれのオブジェクトのメソッドを実行させる。
+
+アヒルが鳴く  duck quacks
+マガモ        mallard duck
+ゴム製アヒル  rubber duck
+ゴム製オモチャ rubber toy
+
+public void swim() {
+    System.out.println(this.name + "はスイスイと泳いだ")
+}
