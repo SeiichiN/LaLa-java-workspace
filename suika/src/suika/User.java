@@ -8,8 +8,8 @@ public class User {
 	int y;
 	
 	public User() {
-		this.x = new Random().nextInt(5);
-		this.y = new Random().nextInt(5);
+		this.x = new Random().nextInt(Const.BOARD_SIZE_X);
+		this.y = new Random().nextInt(Const.BOARD_SIZE_Y);
 	}
 	
 	public void move() {
@@ -25,7 +25,7 @@ public class User {
 				break;
 			case "s":
 				this.y += 1;
-				if (this.y > 4) { this.y = 4; }
+				if (this.y > Const.BOARD_SIZE_Y - 1) { this.y = Const.BOARD_SIZE_Y - 1; }
 				break;
 			case "w":
 				this.x -= 1;
@@ -33,7 +33,7 @@ public class User {
 				break;
 			case "e":
 				this.x += 1;
-				if (this.x > 4) { this.x = 4; }
+				if (this.x > Const.BOARD_SIZE_X - 1) { this.x = Const.BOARD_SIZE_X - 1; }
 				break;
 			default:
 				inputOK = false;

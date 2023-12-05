@@ -7,8 +7,8 @@ public class Suika {
 	int y;
 	
 	public Suika() {
-		this.x = new Random().nextInt(5);
-		this.y = new Random().nextInt(5);
+		this.x = new Random().nextInt(Const.BOARD_SIZE_X);
+		this.y = new Random().nextInt(Const.BOARD_SIZE_Y);
 	}
 	
 	public double getDistance(User user, Suika suika) {
