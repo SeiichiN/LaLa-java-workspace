@@ -10,4 +10,5 @@ public class Com extends Player {
 	public void setHand() {
 		this.hand = new Random().nextInt(3);
 	}
+
 }

@@ -11,19 +11,23 @@ public class Take3Test {
 		Card[] cards = new Card[52];
 		CardUtil util = new CardUtil();
 		util.setup(cards);
-		int[] select3 = take3idx(52);
+		Card[] select3 = take3card(cards);
+		for (Card card : select3) {
+			System.out.println(card);
+		}
 	}
 	
-	public static int[] take3idx(int max) {
-		int[] nums = new int[3];
-		nums[0] = new Random().nextInt(max);
+	
+	public static Card[] take3card(Card[] cards) {
+		Card[] take3 = new Card[3];
+		int num1, num2, num3;
+		num1 = new Random().nextInt(cards.length);
 		do {
-			nums[1] = new Random().nextInt(max);
-		} while (nums[1] == nums[0]);
+			num2 = new Random().nextInt(cards.length);
+		} while (num2 == num1);
 		do {
-			nums[2] = new Random().nextInt(max);
-		} while (nums[2] == nums[0] || nums[2] == nums[1]);
-		return nums;
+			num3 = new Random().nextInt(cards.length);
+		} while (num3 == num1 || num3 == num1);
+		return new Card[] {cards[num1], cards[num2], cards[num3]};
 	}
-
 }

@@ -1,0 +1,43 @@
+インディアンポーカーをつくる
+
+(1)
+一枚のトランプカードのオブジェクトをつくる。
++-----------------+
+| Card            |
++-----------------+
+| suit : String   |
+| num  : int      |
++-----------------+
+| Card(suit, num) |
+| toString()      |
++-----------------+
+
+toString()メソッドは、以下のようにする。
+
+public String toString() {
+  return suit + ":" + num;
+}
+
+(2)
+52枚の山札をつくる。
+本来ならリストかセットがいいのだが、
+今回は配列でつくる。
+Card[] cards = new Card[52];
+この cards に "heart", "diamond", "club", "spade" の
+各組1～13のカードをつくる。
+
+このためのメソッドを setup() とし、
+引数に 配列cards を受け取ることとする。
+これを Mainクラスにつくる。
+
+public static void main(String[] args) {
+  Card[] cards = new Card[52];
+  setup(cards);
+  for (Card card : cards) {
+    System.out.println(card);
+	}
+}
+
+public static void setup(Card[] cards) {
+  ... 
+}

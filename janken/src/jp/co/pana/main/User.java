@@ -11,4 +11,5 @@ public class User extends Player {
 		System.out.println("0:グー 1:チョキ 2:パー 9:終");
 		this.hand = new Scanner(System.in).nextInt();
 	}
+	
 }

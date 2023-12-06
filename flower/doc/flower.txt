@@ -1,0 +1,16 @@
+(1) Flowerという抽象クラスをつくる。
+    フィールドは name : String
+    コンストラクタは引数に name をとる。
+    メソッドは 
+    public void print() {
+      System.out.println("わたしは" + this.name);
+    }
+
+(2) Flowerを継承したクラス Rose と Plum をつくる。
+    フィールドはつくらない。
+    コンストランクタは引数に name をとる。
+    親クラスのコンストラクタを呼び出して
+    name をセットする。
+
+(3) Mainクラスをつくり、main()メソッドでクラスを
+    インスタンス化し、メソッドを実行する。

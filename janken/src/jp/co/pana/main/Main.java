@@ -9,6 +9,8 @@ public class Main {
 			user.setHand();
 			if (user.hand == 9) { break; }
 			com.setHand();
+			user.judge(com);
+			com.judge(user);
 			System.out.println(user.name + ":" + user.hand);
 			System.out.println(com.name + ":" + com.hand);
 		}

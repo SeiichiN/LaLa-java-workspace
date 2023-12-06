@@ -1,5 +1,7 @@
 package rpg.monster;
 
 public interface Runnable {
-	void run();
+	default void run() {
+		System.out.println("トコトコ走って逃げる");
+	}
 }
