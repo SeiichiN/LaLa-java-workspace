@@ -14,16 +14,14 @@ public class Main {
 		Player com = new Player("コム");
 		Player user = new Player("ユーザー");
 
-		int idx = 0;
-		com.card = cards[idx];
-		idx++;
-		user.card = cards[idx];
-		idx++;
+		Card[] select3 = util.take3card(cards);
+		
+		com.card = select3[0];
+		user.card = select3[1];
 		
 		String yesno = dousuru(com);
 		if (yesno.equals("y")) {
-			user.card = cards[idx];
-			idx++;
+			user.card = select3[2];
 		}
 		
 		

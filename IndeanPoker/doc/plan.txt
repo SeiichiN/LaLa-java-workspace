@@ -12,7 +12,7 @@
 | toString()      |
 +-----------------+
 
-toString()メソッドは、以下のようにする。
+toString()メソッドをつくり、以下のようにする。
 
 public String toString() {
   return suit + ":" + num;

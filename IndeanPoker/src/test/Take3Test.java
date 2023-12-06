@@ -17,7 +17,11 @@ public class Take3Test {
 		}
 	}
 	
-	
+	/**
+	 * 1組52枚のカードからランダムに3枚のカードを取得する
+	 * @param cards 1組のカード
+	 * @return 3枚のカードの配列
+	 */
 	public static Card[] take3card(Card[] cards) {
 		Card[] take3 = new Card[3];
 		int num1, num2, num3;
