@@ -1,20 +1,21 @@
 package rpg.monster;
 
+import rpg.charactor.Character;
+
 public abstract class Monster {
 	private int hp;
 	private String type;
 	
 	public Monster() {
-		this.hp = hp;
+		this.hp = 100;
 		this.type = "monster";
 	}
 	public Monster(String type) {
 		this.type = type;
+		this.hp = 100;
 	}
-
-	public void run() {
-		System.out.println("モンスターは逃げ出した");
-	}
+	
+	abstract void attack(Character c);
 
 	public int getHp() {
 		return hp;

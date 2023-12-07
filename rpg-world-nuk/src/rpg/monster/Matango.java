@@ -1,19 +1,28 @@
 package rpg.monster;
 
-import rpg.Hero;
-import rpg.Monster;
+import rpg.charactor.Character;
+import rpg.Runnable;
 
-public class Matango extends Monster {
-	public int hp = 50;
-	public char suffix;
+public class Matango extends Monster implements Runnable {
+	private char suffix;
 	
 	public Matango(char suffix) {
 		this.suffix = suffix;
+		super.setHp(50);
 	}
-	
-	public void attack(Hero h) {
+
+	@Override
+	public void attack(Character c) {
 		System.out.println("キノコ" + this.suffix + "の攻撃");
 		System.out.println("5のダメージ");
-		h.hp -= 5;
+		c.setHp(c.getHp() - 5);
+	}
+
+	public char getSuffix() {
+		return suffix;
+	}
+
+	public void setSuffix(char suffix) {
+		this.suffix = suffix;
 	}
 }

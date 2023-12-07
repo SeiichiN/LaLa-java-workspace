@@ -9,7 +9,9 @@ public class Map {
 	Monster monster;
 	Item item;
 	
-	public Map() {}
+	public Map() {
+		this("");
+	}
 
 	public Map(String name) {
 		this.name = name;

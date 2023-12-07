@@ -1,15 +1,20 @@
 package rpg.charactor;
 
-import rpg.monster.Matango;
+import rpg.Player;
+import rpg.monster.Monster;
 
-public abstract class Character {
+public abstract class Character extends Player {
 	private String name;
 	private int hp;
 	
+	public Character(String name, int hp) {
+		this.name = name;
+		this.hp = hp;
+	}
 	public void run() {
 		System.out.println(this.name + "は逃げ出した");
 	}
-	public abstract void attack(Matango m);
+	public abstract void attack(Monster m);
 	public String getName() {
 		return name;
 	}
