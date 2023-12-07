@@ -24,4 +24,10 @@ public class Slime extends Monster implements Runnable {
 		System.out.println(c.getName() + "に5ポイントのダメージを与えた");
 		c.setHp(c.getHp() - 5);
 	}
+
+	@Override
+	public String toString() {
+		return name;
+	}
+	
 }

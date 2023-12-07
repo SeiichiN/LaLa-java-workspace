@@ -50,5 +50,17 @@ public class Hero {
 	public void run() {
 		System.out.println(this.name + "は逃げ出した");
 	}
+	public int getHp() {
+		return hp;
+	}
+	public void setHp(int hp) {
+		this.hp = hp;
+	}
+	public Sword getSword() {
+		return sword;
+	}
+	public void setSword(Sword sword) {
+		this.sword = sword;
+	}
 
 }

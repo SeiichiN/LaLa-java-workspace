@@ -25,4 +25,9 @@ public class Matango extends Monster implements Runnable {
 	public void setSuffix(char suffix) {
 		this.suffix = suffix;
 	}
+	
+	@Override
+	public String toString() {
+		return "マタンゴ" + suffix;
+	}
 }

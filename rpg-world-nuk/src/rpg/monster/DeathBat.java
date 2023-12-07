@@ -17,5 +17,9 @@ public class DeathBat extends Monster implements Flyable {
 	void attack(Character c) {
 		System.out.println("突っつく");
 	}
-
+	
+	@Override
+	public String toString() {
+		return name;
+	}
 }

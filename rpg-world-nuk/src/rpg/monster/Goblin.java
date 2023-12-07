@@ -17,4 +17,9 @@ public class Goblin extends Monster implements Runnable {
 		c.setHp(c.getHp() - 5);
 	}
 
+	@Override
+	public String toString() {
+		return name;
+	}
+
 }

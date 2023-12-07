@@ -19,6 +19,7 @@ public class Main {
 		Hero h = new Hero("ミナト");
 		do {
 			h.move();
+			System.out.println(h.checkMap());
 		} while (true);
 	}
 	
@@ -26,9 +27,7 @@ public class Main {
 		map = new Map[Board.Y_SIZE][Board.X_SIZE];
 		for (int y = 0; y < Board.Y_SIZE; y++) {
 			for (int x = 0; x < Board.X_SIZE; x++) {
-//				NoMonster nm = new NoMonster();
 				map[y][x] = new Map();
-//				map[y][x].setMonster(nm);
 			}
 		}
 	}
@@ -43,8 +42,12 @@ public class Main {
 		do {
 			x = new Random().nextInt(5);
 			y = new Random().nextInt(5);
-		} while (map[y][x].getMonster().getType() == "monster");
-		map[y][x].setMonster(m);
+		} while (map[y][x].getObj() != null);
+		map[y][x].setObj(m);
+	}
+
+	public static Map[][] getMap() {
+		return map;
 	}
 
 }
