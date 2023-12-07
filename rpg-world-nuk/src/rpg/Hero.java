@@ -1,5 +1,7 @@
 package rpg;
 
+import rpg.monster.Matango;
+
 public class Hero extends Character {
 	
 	public final void slip() {

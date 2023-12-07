@@ -1,4 +1,6 @@
-package rpg;
+package rpg.charactor;
+
+import rpg.monster.Matango;
 
 public class Thief extends Character {
 	int mp;

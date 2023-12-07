@@ -1,8 +1,10 @@
 package rpg;
 
+import rpg.monster.Matango;
+
 public abstract class Character {
 	String name;
-	int hp;
+	public int hp;
 	
 	public void run() {
 		System.out.println(this.name + "は逃げ出した");
