@@ -3,66 +3,93 @@ package rpg;
 import java.util.Random;
 import java.util.Scanner;
 
-import main.Main;
+import rpg.monster.Matango;
 import rpg.monster.Monster;
 
 public abstract class Player {
 	private int x;
 	private int y;
-	
+
 	public Player() {
-		this.x = new Random().nextInt(Board.X_SIZE);
-		this.y = new Random().nextInt(Board.Y_SIZE);
+		this.x = new Random().nextInt(5);
+		this.y = new Random().nextInt(5);
+	}
+
+	public String look(Place[][] places) {
+		System.out.println(places[y][x].getScene());
+		if (places[y][x].getObj() != null) {
+			Object o = places[y][x].getObj();
+			if (o instanceof Monster) {
+				// Monster m = (Monster) o;
+				return "monster";
+			} else {
+				return "item";
+			}
+		}
+		return null;
 	}
 	
+	public Monster getMonster(Place[][] places) {
+		Object o = places[y][x].getObj();
+		if (o instanceof Monster) {
+			Monster m = (Monster) o;
+			return m;
+		} 
+		return null;
+	}
+
+	public boolean isFight() {
+		System.out.print("どうする?  y:たたかう  n:にげる > ");
+		String c = new Scanner(System.in).nextLine().toLowerCase();
+		if (c.equals("y")) {
+			return true;
+		}
+		return false;
+	}
+
+	public abstract void fight(Monster m);
+
+	/**
+	 * n,s,w,e で北南西東で上下左右へ移動。 ゆーざーに入力してもらう。 x,y に反映
+	 */
 	public void move() {
-		System.out.println("現在位置(" + y + ","+ x + ") 移動方向は？");
-		boolean inputOK = false;
-		while (inputOK == false) {
-			inputOK = true;
-			System.out.print("n:北 s:南 w:西 e:東 > ");
+		boolean dirOK = false;
+		do {
+			System.out.print("移動 n:上 s:下 w:左 e:右 > ");
 			String dir = new Scanner(System.in).nextLine().toLowerCase();
+			dirOK = true;
 			switch (dir) {
-			case "s":
-				y += 1;
-				if (y >= Board.Y_SIZE) { y = Board.Y_SIZE - 1; }
-				break;
 			case "n":
-				y -= 1;
-				if (y < 0) { y = 0; }
+				this.y -= 1;
+				if (this.y < 0) {
+					this.y = 0;
+				}
+				break;
+			case "s":
+				this.y += 1;
+				if (this.y >= 5) {
+					this.y = 4;
+				}
 				break;
 			case "w":
-				x -= 1;
-				if (x < 0) { x = 0; }
+				this.x -= 1;
+				if (this.x < 0) {
+					this.x = 0;
+				}
 				break;
 			case "e":
-				x += 1;
-				if (x >= Board.X_SIZE) { x = Board.X_SIZE - 1; }
+				this.x += 1;
+				if (this.x >= 5) {
+					this.x = 4;
+				}
 				break;
 			default:
-				inputOK = false;
+				dirOK = false;
 			}
-		}
-	}
-	
-	public String checkMap() {
-		int x = this.getX();
-		int y = this.getY();
-		Map thisMap = Main.getMap()[y][x];
-		if (thisMap.getObj() != null) {
-			if (thisMap.getObj() instanceof Monster) {
-				Monster m = (Monster) thisMap.getObj();
-				return m.toString();
-			}
-		}
-		return "none";
+		} while (dirOK == false);
 	}
 
-	public int getX() {
-		return x;
-	}
-
-	public int getY() {
-		return y;
+	public String getPlace() {
+		return "(" + y + "," + x + ")";
 	}
 }

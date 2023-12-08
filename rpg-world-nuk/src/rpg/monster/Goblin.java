@@ -1,25 +1,19 @@
 package rpg.monster;
 
 import rpg.Runnable;
-import rpg.charactor.Character;
+import rpg.character.Character;
 
-public class Goblin extends Monster implements Runnable {
-	String name;
+public class Goblin extends WalkingMonster implements Runnable {
 	
-	public Goblin() {}
-	public Goblin(String name) {
-		this.name = name;
-	}
-
-	public void attack(Character c) {
-		System.out.println("ナイフで斬りつける");
-		System.out.println(c.getName() + "に5ポイントのダメージ");
-		c.setHp(c.getHp() - 5);
+	public Goblin() {
+		super("ゴブリン");
 	}
 
 	@Override
-	public String toString() {
-		return name;
+	public void attack(Character c) {
+		System.out.println(this.getType() + "の攻撃");
+		System.out.println(c.getName() + "に10のダメージ");
+		c.setHp(c.getHp() - 10);		
 	}
 
 }
