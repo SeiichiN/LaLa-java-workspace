@@ -1,4 +1,4 @@
-package rpg;
+package rpg.monster;
 
 public class Slime extends Monster {
 	public void run() {

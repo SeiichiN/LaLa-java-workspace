@@ -1,4 +1,6 @@
-package rpg;
+package rpg.monster;
+
+import rpg.character.Hero;
 
 public class DeathBat extends FlyingMonster {
 

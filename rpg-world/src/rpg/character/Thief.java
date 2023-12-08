@@ -1,4 +1,4 @@
-package rpg;
+package rpg.character;
 
 import rpg.monster.Matango;
 
