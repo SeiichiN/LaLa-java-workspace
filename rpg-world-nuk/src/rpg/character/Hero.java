@@ -16,6 +16,7 @@ public class Hero extends Character {
 	
 	@Override	
 	public void attack(Monster m) {
+		if (this.getHp() <= 0) { return; }
 		if (m instanceof Matango) {
 			Matango mm = (Matango) m;
 			System.out.println
@@ -28,24 +29,5 @@ public class Hero extends Character {
 		System.out.println("10ポイントのダメージを与えた");
 		System.out.println(m);
 	}
-	
-	@Override
-	public void fight(Monster m) {
-		while (this.getHp() > 0 && m.getHp() > 0) {
-			this.attack(m);
-			m.attack(this);
-			if (this.isFight() == false) {
-				System.out.println(this.getName() + "は逃げた");
-				break;
-			}
-		}
-		if (this.getHp() <= 0) {
-			System.out.println(this.getName() + "は倒れた");
-		}
-		if (m.getHp() <= 0) {
-			System.out.println(this.getName() + "は" + m.getType() + "を倒した");
-		}
-	}
-	
 	
 }

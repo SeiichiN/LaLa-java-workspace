@@ -1,6 +1,6 @@
 package rpg.monster;
 
-import rpg.Flyable;
+import rpg.common.Flyable;
 
 public abstract class FlyingMonster extends Monster 
                                implements Flyable {

@@ -1,6 +1,6 @@
 package rpg.monster;
 
-import rpg.Runnable;
+import rpg.common.Runnable;
 
 public abstract class WalkingMonster extends Monster
                                   implements Runnable {

@@ -92,4 +92,12 @@ public abstract class Player {
 	public String getPlace() {
 		return "(" + y + "," + x + ")";
 	}
+
+	public int getX() {
+		return x;
+	}
+
+	public int getY() {
+		return y;
+	}
 }

@@ -2,18 +2,22 @@ package main;
 
 import java.util.Random;
 
+import rpg.Const;
+import rpg.Message;
 import rpg.Place;
 import rpg.Player;
 import rpg.character.Hero;
+import rpg.monster.Goblin;
 import rpg.monster.Matango;
 import rpg.monster.Monster;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Place[][] places = new Place[5][5];
+		Place[][] places = new Place[Const.Y_SIZE][Const.X_SIZE];
 		setup(places);
 		setMonster(new Matango('A'), places);
+		setMonster(new Goblin(), places);
 		Hero h = new Hero("ミナト");
 		System.out.println(h.getPlace());
 		while (true) {
@@ -25,6 +29,9 @@ public class Main {
 					if (h.isFight()) {
 						Monster m = h.getMonster(places);
 						h.fight(m);
+						if (m.getHp() <= 0) { 
+							removeMonster(h, places);
+						}
 					}
 				}
 			}
@@ -35,15 +42,24 @@ public class Main {
 		for (int y = 0; y < places.length; y++) {
 			for (int x = 0; x < places.length; x++) {
 				places[y][x] = new Place();
-				places[y][x].setScene("特に何も見当たらない");
+				places[y][x].setScene(Message.NOTHING);
 			}
 		}
 	}
 
 	private static void setMonster(Monster m, Place[][] places) {
-		int x = new Random().nextInt(5);
-		int y = new Random().nextInt(5);
+		int x, y;
+		do {
+			x = new Random().nextInt(Const.X_SIZE);
+			y = new Random().nextInt(Const.Y_SIZE);
+		} while (places[y][x].getObj() != null);
 		places[y][x].setObj(m);
 		places[y][x].setScene(m.getType() + "がいる!");
+	}
+	
+	private static void removeMonster(Player p, Place[][] places) {
+		places[p.getY()][p.getX()].setObj(null);
+		places[p.getY()][p.getX()].setScene(Message.NOTHING);
+		
 	}
 }

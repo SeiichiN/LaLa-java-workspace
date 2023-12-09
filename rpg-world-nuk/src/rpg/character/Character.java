@@ -1,7 +1,7 @@
 package rpg.character;
 
 import rpg.Player;
-import rpg.Runnable;
+import rpg.common.Runnable;
 import rpg.monster.Monster;
 
 public abstract class Character extends Player implements Runnable {
@@ -23,6 +23,25 @@ public abstract class Character extends Player implements Runnable {
 	}
 	
 	public abstract void attack(Monster m);
+	
+	@Override
+	public void fight(Monster m) {
+		while (this.getHp() > 0 && m.getHp() > 0) {
+			this.attack(m);
+			m.attack(this);
+			if (this.getHp() <= 0 || m.getHp() <= 0) { break; }
+			if (this.isFight() == false) {
+				System.out.println(this.getName() + "は逃げた");
+				break;
+			}
+		}
+		if (this.getHp() <= 0) {
+			System.out.println(this.getName() + "は倒れた");
+		}
+		if (m.getHp() <= 0) {
+			System.out.println(this.getName() + "は" + m.getType() + "を倒した");
+		}
+	}
 	
 	public String getName() {
 		return name;
