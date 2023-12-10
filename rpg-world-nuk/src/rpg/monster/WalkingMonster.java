@@ -5,8 +5,8 @@ import rpg.common.Runnable;
 public abstract class WalkingMonster extends Monster
                                   implements Runnable {
 
-	public WalkingMonster(String type, int hp) {
-		super(type, hp);
+	public WalkingMonster(String type, int hp, int damage) {
+		super(type, hp, damage);
 	}
 	public WalkingMonster(String type) {
 		super(type);

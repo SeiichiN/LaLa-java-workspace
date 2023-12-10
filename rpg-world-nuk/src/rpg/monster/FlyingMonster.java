@@ -4,8 +4,8 @@ import rpg.common.Flyable;
 
 public abstract class FlyingMonster extends Monster 
                                implements Flyable {
-	public FlyingMonster(String type, int hp) {
-		super(type, hp);
+	public FlyingMonster(String type, int hp, int damage) {
+		super(type, hp, damage);
 	}
 	public FlyingMonster(String type) {
 		super(type);

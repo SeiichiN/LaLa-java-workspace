@@ -4,11 +4,9 @@ import rpg.character.Character;
 import rpg.common.Runnable;
 
 public class Goblin extends WalkingMonster implements Runnable {
-	private int damage;
 	
 	public Goblin() {
-		super("ゴブリン");
-		this.damage = 10;
+		super("ゴブリン", 80, 10);
 	}
 
 	@Override
@@ -19,14 +17,6 @@ public class Goblin extends WalkingMonster implements Runnable {
 		System.out.println(c.getName() + "に" + damage + "のダメージ");
 		c.setHp(c.getHp() - damage);
 		System.out.println(c);
-	}
-
-	public int getDamage() {
-		return damage;
-	}
-
-	public void setDamage(int damage) {
-		this.damage = damage;
 	}
 
 }
