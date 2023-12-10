@@ -7,6 +7,7 @@ import rpg.Player;
 import rpg.character.Hero;
 import rpg.character.Item;
 import rpg.character.Sword;
+import rpg.monster.DeathBat;
 import rpg.monster.Goblin;
 import rpg.monster.Matango;
 import rpg.monster.Monster;
@@ -18,6 +19,7 @@ public class Main {
 		setup(places);
 		setObj(new Matango('A'), places);
 		setObj(new Goblin(), places);
+		setObj(new DeathBat(), places);
 		setObj(new Sword("炎の剣", 20), places);
 		Hero h = new Hero("ミナト");
 		System.out.println(h.getLocaton());

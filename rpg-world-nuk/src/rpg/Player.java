@@ -58,7 +58,7 @@ public abstract class Player {
 		return null;
 	}
 		
-	public boolean select2(String msg) {
+	public boolean selectYorN(String msg) {
 		System.out.print(msg);
 		String c = new Scanner(System.in).nextLine().toLowerCase();
 		if (c.equals("y")) {
@@ -73,13 +73,13 @@ public abstract class Player {
 	}
 	
 	public boolean isFight() {
-		return select2(Message.SELECT_FIGHT);
+		return selectYorN(Message.SELECT_FIGHT);
 	}
 
 	public abstract void fight(Monster m);
 
 	public boolean isTake() {
-		return select2(Message.SELECT_TAKE);
+		return selectYorN(Message.SELECT_TAKE);
 	}
 	
 	/**
