@@ -2,8 +2,6 @@ package main;
 
 import java.util.Random;
 
-import rpg.Const;
-import rpg.Message;
 import rpg.Place;
 import rpg.Player;
 import rpg.character.Hero;
@@ -19,13 +17,14 @@ public class Main {
 		setMonster(new Matango('A'), places);
 		setMonster(new Goblin(), places);
 		Hero h = new Hero("ミナト");
-		System.out.println(h.getPlace());
+		System.out.println(h.getLocaton());
 		while (true) {
 			h.move();
-			System.out.println(h.getPlace());
-			String type = h.look(places);
-			if (type != null) {
-				if (type.equals("monster")) {
+			System.out.println(h.getLocaton());
+			h.look(places);
+			String info = h.lookFor(places);
+			if (info != null) {
+				if (info.equals("monster")) {
 					if (h.isFight()) {
 						Monster m = h.getMonster(places);
 						h.fight(m);
@@ -47,7 +46,7 @@ public class Main {
 		}
 	}
 
-	private static void setMonster(Monster m, Place[][] places) {
+	public static void setMonster(Monster m, Place[][] places) {
 		int x, y;
 		do {
 			x = new Random().nextInt(Const.X_SIZE);
@@ -57,7 +56,7 @@ public class Main {
 		places[y][x].setScene(m.getType() + "がいる!");
 	}
 	
-	private static void removeMonster(Player p, Place[][] places) {
+	public static void removeMonster(Player p, Place[][] places) {
 		places[p.getY()][p.getX()].setObj(null);
 		places[p.getY()][p.getX()].setScene(Message.NOTHING);
 		

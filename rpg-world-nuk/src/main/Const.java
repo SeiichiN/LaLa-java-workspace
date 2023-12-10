@@ -1,4 +1,4 @@
-package rpg;
+package main;
 
 public class Const {
 	public static final int X_SIZE = 5;

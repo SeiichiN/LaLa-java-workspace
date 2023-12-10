@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 3226 3850" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="アートボード1" transform="matrix(0.919477,0,0,1.55213,0,0)">
+        <rect x="0" y="0" width="3507.87" height="2480.32" style="fill:none;"/>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <rect x="224.874" y="484.321" width="467.688" height="149.772" style="fill:white;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-460.897,151.324)">
+            <text x="692.343px" y="328.552px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Heroインスタンスの作成</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-410.429,36.4624)">
+            <circle cx="828.269" cy="252.862" r="50.263" style="fill:white;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-206.82,4.63334)">
+            <text x="625.874px" y="316.101px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:41.667px;">A</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-11.1928,179.631)">
+            <text x="744.343px" y="234.309px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Hero extends Player</text>
+            <text x="788.81px" y="267.642px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">x : int</text>
+            <text x="788.81px" y="300.975px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">y : int</text>
+            <text x="744.343px" y="334.309px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">コンストラクタ</text>
+            <text x="788.81px" y="367.642px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">x : ランダム(0〜4)</text>
+            <text x="788.81px" y="400.975px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">y : ランダム(0〜5)</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-8.17318,68.0548)">
+            <path d="M1517.56,327.477L1463.7,374.852L1462.93,470.376L1798.51,472.774L1799.15,374.981L1750.57,326.623L1517.56,327.477Z" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,-0.644275,-45.7151,2558.9)">
+            <path d="M1517.56,327.477L1463.7,374.852L1462.93,470.376L1798.51,472.774L1799.15,374.981L1750.57,326.623L1517.56,327.477Z" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.82914,0,0,1.98255,1104.73,-1597.49)">
+            <rect x="238" y="1031.43" width="253.75" height="51.687" style="fill:white;stroke:black;stroke-width:1.26px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,1281.22,-217.159)">
+            <path d="M277.498,1031.43L277.498,1190.48" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,1281.22,-217.159)">
+            <path d="M611.592,1025.53C610.693,1080.97 609.794,1136.42 608.894,1191.86" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.82914,0,0,1.98255,1963.33,-441.103)">
+            <rect x="238" y="1031.43" width="253.75" height="51.687" style="fill:white;stroke:black;stroke-width:1.26px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,24.5429,15.8552)">
+            <text x="2299.6px" y="2558.47px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Itemを拾う</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M2447.49,1767.4L2440.45,1772.09L2433.42,1767.4" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1832.71,1570.12L2440.45,1570.12L2440.45,1772.09" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.82914,0,0,1.98255,1101.62,-1287.12)">
+            <rect x="238" y="1031.43" width="253.75" height="51.687" style="fill:white;stroke:black;stroke-width:1.26px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,1274.22,-390.257)">
+            <text x="328.52px" y="1848.05px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">この場所を見る</text>
+            <text x="328.52px" y="1881.38px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">h.look()</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,2139.83,939.232)">
+            <path d="M277.498,1031.43L277.498,1190.48" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,1278.11,93.2117)">
+            <path d="M277.498,1031.43L277.498,1190.48" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,2139.83,939.232)">
+            <path d="M611.592,1025.53C610.693,1080.97 609.794,1136.42 608.894,1191.86" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,1278.11,93.2117)">
+            <path d="M611.592,1025.53C610.693,1080.97 609.794,1136.42 608.894,1191.86" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.72557,1319.78,-272.38)">
+            <text x="355.145px" y="843.064px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">ループ</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,802.413,-92.3371)">
+            <text x="792.897px" y="919.367px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Heroの移動</text>
+            <text x="792.897px" y="952.7px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">h.move()</text>
+        </g>
+        <g transform="matrix(0.82244,0,0,0.49207,-1877.32,462.716)">
+            <path d="M3067.59,81.597C3060.16,77.622 2756.34,81.597 2756.34,81.597L2695.07,168.141L2756.34,240.301C2756.34,240.301 3064.93,242.666 3067.59,240.301C3112.86,200.097 3120.51,109.923 3067.59,81.597Z" style="fill:white;stroke:black;stroke-width:4.11px;"/>
+        </g>
+        <g transform="matrix(0.82244,0,0,0.49207,-633.953,571.659)">
+            <path d="M3067.59,81.597C3060.16,77.622 2756.34,81.597 2756.34,81.597L2695.07,168.141L2756.34,240.301C2756.34,240.301 3064.93,242.666 3067.59,240.301C3112.86,200.097 3120.51,109.923 3067.59,81.597Z" style="fill:white;stroke:black;stroke-width:4.11px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-599.39,-103.859)">
+            <text x="913.555px" y="1016.23px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">現在位置を表示</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,643.974,5.0842)">
+            <text x="913.555px" y="1016.23px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">現在位置を表示</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M455.964,470.53L448.933,475.218L441.902,470.53" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M448.933,361.908L448.933,475.218" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M458.738,774.218L451.707,778.906L444.676,774.218" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M451.707,636.933L451.707,778.906" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <circle cx="447.183" cy="1165.51" r="53.328" style="fill:white;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,1299.79,-571.051)">
+            <circle cx="447.183" cy="1165.51" r="53.328" style="fill:white;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-240.086,-13.9227)">
+            <text x="654.495px" y="1206.63px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:41.667px;">B</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,1060.13,-588.264)">
+            <text x="654.495px" y="1206.63px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:41.667px;">B</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M456.599,1101.71L449.567,1106.4L442.536,1101.71" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M449.567,903.669L449.567,1106.4" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.49713,0,0,0.584835,-2991.42,1419.59)">
+            <path d="M3170.04,1032.86L3025.1,1131.67L3164.03,1224.29L3310.46,1129.63L3170.04,1032.86Z" style="fill:none;stroke:black;stroke-width:2.68px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-805.765,690.204)">
+            <path d="M3170.04,1032.86L3025.1,1131.67L3164.03,1224.29L3310.46,1129.63L3170.04,1032.86Z" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.35179,0,0,0.644275,-1637.45,479.812)">
+            <path d="M3170.04,1032.86L3025.1,1131.67L3164.03,1224.29L3310.46,1129.63L3170.04,1032.86Z" style="fill:none;stroke:black;stroke-width:2.77px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-2.81793,12.1356)">
+            <text x="2344.94px" y="1871.77px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Itemがある?</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1617.48,2977.66L1612.8,2970.63L1617.48,2963.6" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1838.57,1885.86L2090.54,1885.86L2090.54,2970.63L1612.8,2970.63" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1618.42,1728.63L1623.11,1735.66L1618.42,1742.69" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1427.26,2497.92L1250.96,2497.92L1250.96,1735.66L1623.11,1735.66" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.55515,0,0,0.644275,-3154.48,878.88)">
+            <path d="M3170.04,1032.86L3025.1,1131.67L3164.03,1224.29L3310.46,1129.63L3170.04,1032.86Z" style="fill:none;stroke:black;stroke-width:2.53px;"/>
+        </g>
+        <g transform="matrix(1.60694,0,0,0.644275,-3317.39,487.044)">
+            <path d="M3170.04,1032.86L3025.1,1131.67L3164.03,1224.29L3310.46,1129.63L3170.04,1032.86Z" style="fill:none;stroke:black;stroke-width:2.48px;"/>
+        </g>
+        <g transform="matrix(1.57252,0,0,0.644275,-3211.06,283.24)">
+            <path d="M3170.04,1032.86L3025.1,1131.67L3164.03,1224.29L3310.46,1129.63L3170.04,1032.86Z" style="fill:none;stroke:black;stroke-width:2.51px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-377.545,77.3158)">
+            <text x="1843.59px" y="1463.94px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">モンスターがいる?</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-310.733,108.001)">
+            <text x="1866.44px" y="1731.48px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">戦う？</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <rect x="1427.56" y="2098.42" width="421.531" height="171.277" style="fill:white;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-11.6927,399.116)">
+            <rect x="1427.56" y="2098.42" width="421.531" height="171.277" style="fill:white;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,8.71104,14.7954)">
+            <text x="1494.5px" y="2175.01px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">モンスターと戦う</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-2.98163,413.912)">
+            <text x="1494.5px" y="2175.01px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">モンスターを削除</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1463.46,2098.49L1463.46,2268.33" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-11.6927,399.116)">
+            <path d="M1463.46,2098.49L1463.46,2268.33" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1809.29,2097.72L1809.29,2265" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-11.6927,399.116)">
+            <path d="M1809.29,2097.72L1809.29,2265" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-29.1031,4.36382)">
+            <text x="1553.72px" y="2483.84px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">モンスターの</text>
+            <text x="1553.72px" y="2517.18px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">HP &lt;= 0</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1637.73,425.391L1630.7,430.079L1623.67,425.391" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1630.7,331.011L1630.7,430.079" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1630.03,687.295L1623,691.983L1615.96,687.295" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1623,579.386L1623,691.983" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1624.25,939.14L1617.22,943.827L1610.18,939.14" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1617.22,848.228L1617.22,943.827" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1619.43,1160.28L1612.4,1164.97L1605.37,1160.28" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1612.4,1065.38L1612.4,1164.97" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1634.1,1460.67L1627.47,1465.91L1620.08,1461.8" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1616.83,1333.53C1616.83,1333.53 1626.16,1449.69 1627.47,1465.91" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1639.94,1778.14L1633.55,1783.67L1625.99,1779.89" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1618.18,1661.17C1618.18,1661.17 1631.61,1768.17 1633.55,1783.67" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1639.08,2092.56L1632.05,2097.25L1625.02,2092.56" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1632.05,1981.01L1632.05,2097.25" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1638.5,2383.78L1631.47,2388.46L1624.44,2383.78" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1631.47,2268.41L1631.47,2388.46" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1627.91,2704.3L1620.88,2708.99L1613.84,2704.3" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1620.88,2588.94L1620.88,2708.99" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,1.26698,0,-1801.03)">
+            <g transform="matrix(1,-0,-0,0.508514,-0,1421.52)">
+                <path d="M1614.23,3125.17L1607.2,3129.86L1600.16,3125.17" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+                <path d="M1607.2,2892.3L1607.2,3129.86" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+            </g>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,48.2907,309.52)">
+            <text x="1504.09px" y="3110.56px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">ループ</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-7.43654,12.191)">
+            <text x="2373.47px" y="2182.44px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Itemを</text>
+            <text x="2373.47px" y="2215.78px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">拾う?</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M2438.07,2094.21L2431.04,2098.9L2424.01,2094.21" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M2431.04,1971.39L2431.04,2098.9" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M2434.35,2479.32L2427.32,2484.01L2420.28,2479.32" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M2427.32,2300.11L2427.32,2484.01" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M2096.74,2977.63L2092.05,2970.6L2096.74,2963.57" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M2423.47,2650.1L2423.47,2970.6L2092.05,2970.6" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M2431.14,2981.64L2426.45,2974.61L2431.14,2967.58" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M2572.02,2201.09L2742.57,2201.09L2742.57,2974.61L2426.45,2974.61" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M2750.86,2978.02L2746.31,2970.9L2751.13,2963.97" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M2606.46,1876.17L2874.64,1876.17L2874.64,2973.39C2874.64,2973.39 2762.27,2971.21 2746.31,2970.9" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-43.2161,-1.12905)">
+            <text x="1531.68px" y="3229.43px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">終了条件を</text>
+            <text x="1531.68px" y="3262.76px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">満たしている?</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M1603.85,3318.62L1603.85,3498.25" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-66.7471,-39.457)">
+            <path d="M2289.84,3236.41C2252.08,3236 2251.85,3308.11 2251.85,3308.11C2251.85,3308.11 2253.6,3376.9 2291.02,3377.61C2293.02,3377.65 2524.99,3377.66 2526.4,3377.61C2559.95,3376.42 2558.9,3312.02 2558.9,3312.02C2558.9,3312.02 2563.14,3236.83 2526.4,3235.97C2526.09,3235.96 2289.98,3236.41 2289.84,3236.41Z" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,42.6283,4.70404)">
+            <text x="2273.43px" y="3248.89px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">終了</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <path d="M2174.8,3220.88L2179.49,3227.91L2174.8,3234.94" style="fill:none;stroke:black;stroke-width:3.13px;stroke-linejoin:miter;stroke-miterlimit:10;"/>
+            <path d="M1803.65,3227.91L2179.49,3227.91" style="fill:none;stroke:black;stroke-width:3.13px;"/>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <text x="1655.94px" y="1691.78px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Yes</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-67.2981,62.0649)">
+            <text x="1908.14px" y="1527.89px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">No</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <text x="1657.29px" y="2020.65px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Yes</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-27.0012,53.544)">
+            <text x="1857.81px" y="1860.57px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">No</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,833.759,41.7086)">
+            <text x="1857.81px" y="1860.57px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">No</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,777.694,252.512)">
+            <text x="1857.81px" y="1860.57px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">No</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <text x="1654.95px" y="2622.57px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Yes</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,0,0)">
+            <text x="1353.84px" y="2457.9px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">No</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-84.2392,-7.86797)">
+            <text x="1686.1px" y="3372.35px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Yes</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,828.644,-878.668)">
+            <text x="1686.1px" y="3372.35px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Yes</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,832.94,-667.907)">
+            <text x="1686.1px" y="3372.35px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">Yes</text>
+        </g>
+        <g transform="matrix(1.08757,0,0,0.644275,-136.377,-61.571)">
+            <text x="1939.1px" y="3375.2px" style="font-family:'SourceHanCodeJP-Regular', 'Source Han Code JP', sans-serif;font-size:33.333px;">No</text>
+        </g>
+    </g>
+</svg>

@@ -14,11 +14,16 @@ public abstract class Player {
 		this.x = new Random().nextInt(5);
 		this.y = new Random().nextInt(5);
 	}
+	
+	public void look(Place[][] places) {
+		Place here = places[y][x];
+		System.out.println(here.getScene());
+	}
 
-	public String look(Place[][] places) {
-		System.out.println(places[y][x].getScene());
-		if (places[y][x].getObj() != null) {
-			Object o = places[y][x].getObj();
+	public String lookFor(Place[][] places) {
+		Place here = places[y][x];
+		if (here.getObj() != null) {
+			Object o = here.getObj();
 			if (o instanceof Monster) {
 				// Monster m = (Monster) o;
 				return "monster";
@@ -89,7 +94,7 @@ public abstract class Player {
 		} while (dirOK == false);
 	}
 
-	public String getPlace() {
+	public String getLocaton() {
 		return "(" + y + "," + x + ")";
 	}
 
