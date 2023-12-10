@@ -5,10 +5,12 @@ import rpg.common.Runnable;
 
 public class Matango extends WalkingMonster implements Runnable {
 	private char suffix;
+	private int damage;
 	
 	public Matango(char suffix) {
 		super("マタンゴ", 50);
 		this.suffix = suffix;
+		this.damage = 5;
 	}
 	
 	@Override
@@ -20,12 +22,21 @@ public class Matango extends WalkingMonster implements Runnable {
 	public void attack(Character c) {
 		if (this.getHp() <= 0) { return; }
 		System.out.println(this.getType() + this.suffix + "の攻撃");
-		System.out.println(c.getName() + "に5のダメージ");
-		c.setHp(c.getHp() - 5);
+		int damage = (int)(Math.random() * this.getDamage());
+		System.out.println(c.getName() + "に" + damage + "のダメージ");
+		c.setHp(c.getHp() - damage);
 		System.out.println(c);
 	}
 
 	public char getSuffix() {
 		return suffix;
+	}
+
+	public int getDamage() {
+		return damage;
+	}
+
+	public void setDamage(int damage) {
+		this.damage = damage;
 	}
 }

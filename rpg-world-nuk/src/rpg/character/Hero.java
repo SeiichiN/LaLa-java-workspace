@@ -7,11 +7,11 @@ public class Hero extends Character {
 	Sword sword;
 	
 	public Hero(String name) {
-		super(name, 100);
+		this(name, 100);
 	}
 	public Hero(String name, int hp) {
 		super(name, hp);
-		this.sword = new Sword("炎の剣");
+		this.sword = new Sword("ふつうの剣");
 	}
 	
 	@Override	
@@ -25,9 +25,17 @@ public class Hero extends Character {
 			System.out.println
 		    (this.getName() + "の " + m.getType() + "への攻撃");
 		}
-	    m.setHp(m.getHp() - 10); 
-		System.out.println("10ポイントのダメージを与えた");
+		int maxDamage = this.getSword().getDamage();
+		int damage = (int)(Math.random() * maxDamage);
+	    m.setHp(m.getHp() - damage); 
+		System.out.println(damage + "ポイントのダメージを与えた");
 		System.out.println(m);
+	}
+	public Sword getSword() {
+		return sword;
+	}
+	public void setSword(Sword sword) {
+		this.sword = sword;
 	}
 	
 }

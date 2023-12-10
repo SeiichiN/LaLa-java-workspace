@@ -11,8 +11,8 @@ public class HeroLookTest {
 	public static void main(String[] args) {
 		Place[][] places = new Place[Const.Y_SIZE][Const.X_SIZE];
 		Main.setup(places);
-		Main.setMonster(new Matango('A'), places);
-		Main.setMonster(new Goblin(), places);
+		Main.setObj(new Matango('A'), places);
+		Main.setObj(new Goblin(), places);
 		Hero h = new Hero("ミナト");
 		System.out.println(h.getLocaton());
 		while (true) {

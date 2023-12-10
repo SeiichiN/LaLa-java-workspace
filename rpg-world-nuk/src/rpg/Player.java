@@ -3,16 +3,20 @@ package rpg;
 import java.util.Random;
 import java.util.Scanner;
 
+import main.Message;
+import rpg.character.Item;
 import rpg.monster.Matango;
 import rpg.monster.Monster;
 
 public abstract class Player {
 	private int x;
 	private int y;
+	private boolean life;
 
 	public Player() {
 		this.x = new Random().nextInt(5);
 		this.y = new Random().nextInt(5);
+		this.life = true;
 	}
 	
 	public void look(Place[][] places) {
@@ -25,7 +29,6 @@ public abstract class Player {
 		if (here.getObj() != null) {
 			Object o = here.getObj();
 			if (o instanceof Monster) {
-				// Monster m = (Monster) o;
 				return "monster";
 			} else {
 				return "item";
@@ -34,33 +37,58 @@ public abstract class Player {
 		return null;
 	}
 	
+	/**
+	 * この getMonster() と 次の getItem() は、ほぼ同じ内容である。
+	 * とすると、リフレクションを使って、両方ができるメソッドを
+	 * 作成できるのではなかろうか？
+	 */
 	public Monster getMonster(Place[][] places) {
 		Object o = places[y][x].getObj();
 		if (o instanceof Monster) {
-			Monster m = (Monster) o;
-			return m;
+			return (Monster) o;
 		} 
 		return null;
 	}
-
-	public boolean isFight() {
-		System.out.print("どうする?  y:たたかう  n:にげる > ");
+	
+	public Item getItem(Place[][] places) {
+		Object o = places[y][x].getObj();
+		if (o instanceof Item) {
+			return (Item) o;
+		} 
+		return null;
+	}
+		
+	public boolean select2(String msg) {
+		System.out.print(msg);
 		String c = new Scanner(System.in).nextLine().toLowerCase();
 		if (c.equals("y")) {
 			return true;
 		}
 		return false;
 	}
+	
+	public void gameover() {
+		System.out.println("GAME OVER");
+		this.life = false;
+	}
+	
+	public boolean isFight() {
+		return select2(Message.SELECT_FIGHT);
+	}
 
 	public abstract void fight(Monster m);
 
+	public boolean isTake() {
+		return select2(Message.SELECT_TAKE);
+	}
+	
 	/**
 	 * n,s,w,e で北南西東で上下左右へ移動。 ゆーざーに入力してもらう。 x,y に反映
 	 */
 	public void move() {
 		boolean dirOK = false;
 		do {
-			System.out.print("移動 n:上 s:下 w:左 e:右 > ");
+			System.out.print(Message.SELECT_MOVE);
 			String dir = new Scanner(System.in).nextLine().toLowerCase();
 			dirOK = true;
 			switch (dir) {
@@ -104,5 +132,9 @@ public abstract class Player {
 
 	public int getY() {
 		return y;
+	}
+
+	public boolean isLife() {
+		return life;
 	}
 }
