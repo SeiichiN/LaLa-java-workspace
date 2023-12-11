@@ -1,8 +1,9 @@
 package rpg.monster;
 
+import rpg.Enemy;
 import rpg.character.Character;
 
-public abstract class Monster {
+public abstract class Monster extends Enemy {
 	private int hp;
 	private String type;
 	

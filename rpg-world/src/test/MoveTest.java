@@ -1,6 +1,7 @@
 package test;
 
 import rpg.Player;
+import rpg.character.Hero;
 
 public class MoveTest {
 

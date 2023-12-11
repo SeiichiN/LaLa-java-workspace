@@ -1,5 +1,6 @@
 package rpg.character;
 
+import rpg.Player;
 import rpg.Runnable;
 import rpg.monster.Monster;
 
@@ -14,6 +15,8 @@ public abstract class Character implements Runnable {
 		this.name = name;
 		this.hp = hp;
 	}
+
+	public abstract void attack(Monster m);
 	
 	@Override
 	public void run() {
@@ -21,7 +24,6 @@ public abstract class Character implements Runnable {
 		(this.getName() + "は走って逃げた");
 	}
 	
-	public abstract void attack(Monster m);
 	public String getName() {
 		return name;
 	}
