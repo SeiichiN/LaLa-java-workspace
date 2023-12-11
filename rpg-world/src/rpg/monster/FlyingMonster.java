@@ -1,11 +1,18 @@
 package rpg.monster;
 
-import rpg.Runnable;
+import rpg.Flyable;
 
 public abstract class FlyingMonster extends Monster 
-                               implements Runnable {
+                               implements Flyable {
+	public FlyingMonster(String type, int hp) {
+		super(type, hp);
+	}
+	public FlyingMonster(String type) {
+		this(type, 60);
+	}
+
 	@Override
-	public void run() {
+	public void fly() {
 		System.out.println("バサバサ飛んで逃げる");
 	}
 }
