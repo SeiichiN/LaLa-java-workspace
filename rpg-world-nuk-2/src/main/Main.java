@@ -8,15 +8,15 @@ import rpg.monster.Matango;
 import rpg.monster.Monster;
 
 public class Main {
+	private static Place[][] places = new Place[Const.Y_SIZE][Const.X_SIZE];
 
 	public static void main(String[] args) {
-		Place[][] places = new Place[Const.Y_SIZE][Const.X_SIZE];
-		setupPlaces(places);
+		setupPlaces();
 		Goblin g = new Goblin();
-		setObject(g, places);
+		setObject(g);
 		System.out.println(g);
 		Player p = new Player();
-		setPlayer(p, places);
+		setPlayer(p);
 		System.out.println(p);
 		while (true) {
 			g.move(places);
@@ -29,7 +29,7 @@ public class Main {
 
 	}
 	
-	public static void setupPlaces(Place[][] places) {
+	public static void setupPlaces() {
 		for (int y = 0; y < places.length; y++) {
 			for (int x = 0; x < places[y].length; x++) {
 				Object obj = null;
@@ -38,13 +38,13 @@ public class Main {
 		}
 	}
 	
-	public static void setPlayer(Player p, Place[][] places) {
+	public static void setPlayer(Player p) {
 		Place blankPlace = getBlankPlace(places);
 		p.setX(blankPlace.getX());
 		p.setY(blankPlace.getY());
 	}
 	
-	public static void setObject(Object obj, Place[][] places) {
+	public static void setObject(Object obj) {
 		Place blankPlace = getBlankPlace(places);
 		blankPlace.setObj(obj);
 		blankPlace.setScene("敵がいます");

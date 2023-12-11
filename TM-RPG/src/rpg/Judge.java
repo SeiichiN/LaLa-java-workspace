@@ -5,25 +5,22 @@ import java.lang.reflect.Array;
 public class Judge {
 
 	Battle vs = new Battle();
-//	Monster[] array = new Monster[6];
 
 	public void judgement(Character c) {
-		Monster m0 = new Goblin("ゴブリン", 'A');
-		Monster m1 = new Goblin("ゴブリン", 'B');
-		Monster m2 = new DeathBat("デスバット", 'A');
-		Monster m3 = new DeathBat("デスバット", 'B');
-		Monster m4 = new Matango("マタンゴ", 'A');
-		Monster m5 = new Matango("マタンゴ", 'B');
+		Monster[] monsters = new Monster[6];
+		monsters[0] = new Goblin("ゴブリン", 'A');
+		monsters[1] = new Goblin("ゴブリン", 'B');
+		monsters[2] = new DeathBat("デスバット", 'A');
+		monsters[3] = new DeathBat("デスバット", 'B');
+		monsters[4] = new Matango("マタンゴ", 'A');
+		monsters[5] = new Matango("マタンゴ", 'B');
 
-		m0.autoMove();
-		m1.autoMove();
-		m2.autoMove();
-		m3.autoMove();
-		m4.autoMove();
-		m5.autoMove();
-
+		for (Monster m : monsters) {
+			m.autoMove();
+		}
+		
 		while (true) {
-			if (m0.x + m0.y + m1.x + m1.y + m2.x + m2.y + m3.x + m3.y + m4.x + m4.y + m5.x + m5.y == 0) {
+			if (sumXY(monsters) == 0) {
 				System.out.println("フィールド内の全てのモンスターを倒した！");
 				System.out.println("GAME CLEAR！");
 				break;
@@ -34,66 +31,50 @@ public class Judge {
 			System.out.println("| しかし、ここには何もいないようだ…");
 			System.out.println(" ------------------------------------");
 			c.move();
-
-			if (c.x > 5) {
-				c.x -= 1;
-				System.out.println("!!!!!!!!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!!!!!!!");
-				System.out.println("これ以上東に進むとキャラクターが戦闘領域から抜けてしまいます！");
+			checkMove(c);
+			
+			for (Monster m : monsters) {
+				if (c.x == m.x && c.y == m.y) {
+					System.out.println(" ------------------------------------");
+					System.out.println("| なにかが草むらから飛び出してきた！");
+					vs.battle(c, m);
+					m.delete(m);
+					// break;
+				}
 			}
-			if (c.x < 1) {
-				c.x += 1;
-				System.out.println("!!!!!!!!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!!!!!!!");
-				System.out.println("これ以上西に進むとキャラクターが戦闘領域から抜けてしまいます！");
-			}
-			if (c.y > 5) {
-				c.y -= 1;
-				System.out.println("!!!!!!!!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!!!!!!!");
-				System.out.println("これ以上北に進むとキャラクターが戦闘領域から抜けてしまいます！");
-			}
-			if (c.y < 1) {
-				c.y += 1;
-				System.out.println("!!!!!!!!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!!!!!!!");
-				System.out.println("これ以上南に進むとキャラクターが戦闘領域から抜けてしまいます！");
-			}
-
-			if (c.x == m0.x && c.y == m0.y) {
-				System.out.println(" ------------------------------------");
-				System.out.println("| なにかが草むらから飛び出してきた！");
-				vs.battle(c, m0);
-				m0.delete(m0);
-				break;
-			} else if (c.x == m1.x && c.y == m1.y) {
-				System.out.println(" ------------------------------------");
-				System.out.println("| なにかが草むらから飛び出してきた！");
-				vs.battle(c, m1);
-				m1.delete(m1);
-				break;
-			} else if (c.x == m2.x && c.y == m2.y) {
-				System.out.println(" ------------------------------------");
-				System.out.println("| なにかが草むらから飛び出してきた！");
-				vs.battle(c, m2);
-				m2.delete(m2);
-				break;
-			} else if (c.x == m3.x && c.y == m3.y) {
-				System.out.println(" ------------------------------------");
-				System.out.println("| なにかが草むらから飛び出してきた！");
-				vs.battle(c, m3);
-				m3.delete(m3);
-				break;
-			} else if (c.x == m4.x && c.y == m4.y) {
-				System.out.println(" ------------------------------------");
-				System.out.println("| なにかが草むらから飛び出してきた！");
-				vs.battle(c, m4);
-				m4.delete(m4);
-				break;
-			} else if (c.x == m5.x && c.y == m5.y) {
-				System.out.println(" ------------------------------------");
-				System.out.println("| なにかが草むらから飛び出してきた！");
-				vs.battle(c, m5);
-				m5.delete(m5);
-				break;
-			}
+			
 		}
 	}
 
+	private int sumXY(Monster[] monsters) {
+		int sum = 0;
+		for (Monster m : monsters) {
+			sum += (m.x + m.y);
+		}
+		return sum;
+	}
+	
+	private void checkMove(Character c) {
+		if (c.x > 5) {
+			c.x -= 1;
+			System.out.println("!!!!!!!!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!!!!!!!");
+			System.out.println("これ以上東に進むとキャラクターが戦闘領域から抜けてしまいます！");
+		}
+		if (c.x < 1) {
+			c.x += 1;
+			System.out.println("!!!!!!!!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!!!!!!!");
+			System.out.println("これ以上西に進むとキャラクターが戦闘領域から抜けてしまいます！");
+		}
+		if (c.y > 5) {
+			c.y -= 1;
+			System.out.println("!!!!!!!!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!!!!!!!");
+			System.out.println("これ以上北に進むとキャラクターが戦闘領域から抜けてしまいます！");
+		}
+		if (c.y < 1) {
+			c.y += 1;
+			System.out.println("!!!!!!!!!!!!!!!!!!!!!!WARNING!!!!!!!!!!!!!!!!!!!!!!!!!");
+			System.out.println("これ以上南に進むとキャラクターが戦闘領域から抜けてしまいます！");
+		}
+		
+	}
 }
