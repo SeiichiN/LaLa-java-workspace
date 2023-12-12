@@ -3,7 +3,6 @@ package main;
 import java.util.Random;
 
 import rpg.Place;
-import rpg.Player;
 import rpg.character.Hero;
 import rpg.character.Item;
 import rpg.character.Sword;

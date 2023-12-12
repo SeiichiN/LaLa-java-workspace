@@ -1,8 +1,8 @@
 package rpg;
 
 public class Place {
-	Object obj;
-	String scene;
+	private Object obj;
+	private String scene;
 	
 	public Place() {
 		this.obj = null;

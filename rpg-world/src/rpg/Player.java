@@ -15,6 +15,11 @@ public class Player {
 		this.y = new Random().nextInt(Const.Y_SIZE);
 	}
 	
+	public void look(Place[][] places) {
+		Place here = places[y][x];
+		System.out.println(here.getScene());
+	}
+	
 	/**
 	 * n,s,w,e で北南西東で上下左右へ移動。
 	 * ゆーざーに入力してもらう。
@@ -49,7 +54,7 @@ public class Player {
 		} while(inputOK == false);
 	}
 	
-	public String toString() {
+	public String getLocation() {
 		return "(" + y + "," + x + ")";
 	}
 }

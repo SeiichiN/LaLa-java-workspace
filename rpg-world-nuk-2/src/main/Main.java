@@ -4,26 +4,29 @@ import rpg.Enemy;
 import rpg.Place;
 import rpg.Player;
 import rpg.monster.Goblin;
-import rpg.monster.Matango;
-import rpg.monster.Monster;
 
+/**
+ * Mainクラス
+ * ゲーム全体を管理運営するクラス
+ */
 public class Main {
+	// 各場所の2次元配列。各場所にオブジェクトを配置する。
 	private static Place[][] places = new Place[Const.Y_SIZE][Const.X_SIZE];
 
 	public static void main(String[] args) {
 		setupPlaces();
-		Goblin g = new Goblin();
-		setObject(g);
-		System.out.println(g);
-		Player p = new Player();
-		setPlayer(p);
-		System.out.println(p);
+		Goblin goblin = new Goblin();
+		setObject(goblin);
+		System.out.println(goblin);
+		Player player = new Player();
+		setPlayer(player);
+		System.out.println(player);
 		while (true) {
-			g.move(places);
-			System.out.println(g);
-			p.move();
-			System.out.println(p);
-			p.look(places);
+			goblin.move(places);
+			System.out.println(goblin);
+			player.move();
+			System.out.println(player);
+			player.look(places);
 		}
 		
 
