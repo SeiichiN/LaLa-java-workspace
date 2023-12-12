@@ -2,11 +2,15 @@ package rpg;
 
 import java.lang.reflect.Array;
 
+/**
+ * このクラスは何をするためのクラスなのか？
+ */
 public class Judge {
 
 	Battle vs = new Battle();
 
 	public void judgement(Character c) {
+		// このメソッドが呼ばれるたびにモンスターが生まれる
 		Monster[] monsters = new Monster[6];
 		monsters[0] = new Goblin("ゴブリン", 'A');
 		monsters[1] = new Goblin("ゴブリン", 'B');

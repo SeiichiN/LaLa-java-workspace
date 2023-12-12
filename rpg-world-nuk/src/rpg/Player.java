@@ -116,6 +116,9 @@ public abstract class Player {
 					this.x = 4;
 				}
 				break;
+			case "l":
+				// System.out.println(this.getLocaton());
+				break;
 			default:
 				dirOK = false;
 			}
