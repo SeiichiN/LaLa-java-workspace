@@ -37,7 +37,7 @@ public abstract class Character extends Player implements Runnable {
 		}
 		if (this.getHp() <= 0) {
 			System.out.println(this.getName() + "は倒れた");
-			super.gameover();
+			super.die();
 		}
 		if (m.getHp() <= 0) {
 			System.out.println(this.getName() + "は" + m.getType() + "を倒した");

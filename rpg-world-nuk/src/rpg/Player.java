@@ -3,27 +3,41 @@ package rpg;
 import java.util.Random;
 import java.util.Scanner;
 
+import main.Const;
 import main.Message;
 import rpg.character.Item;
-import rpg.monster.Matango;
 import rpg.monster.Monster;
 
+/**
+ * ゲームエリアでの移動や戦いを表すクラス。
+ * これを継承することで、このクラスのフィールドや
+ * メソッドを子クラスで使えるようになる。
+ */
 public abstract class Player {
-	private int x;
-	private int y;
-	private boolean life;
+	private int x;                   // x座標
+	private int y;                   // y座標
+	private boolean life;            // プレーヤーの命 true:生きている
 
 	public Player() {
-		this.x = new Random().nextInt(5);
-		this.y = new Random().nextInt(5);
+		this.x = new Random().nextInt(Const.X_SIZE);
+		this.y = new Random().nextInt(Const.Y_SIZE);
 		this.life = true;
 	}
 	
+	/**
+	 * 現在の場所の説明(scene)を表示する
+	 * @param places
+	 */
 	public void look(Place[][] places) {
 		Place here = places[y][x];
 		System.out.println(here.getScene());
 	}
 
+	/**
+	 * この場所に何があるかを調べる
+	 * @param places
+	 * @return "monster" / "item"
+	 */
 	public String lookFor(Place[][] places) {
 		Place here = places[y][x];
 		if (here.getObj() != null) {
@@ -38,9 +52,9 @@ public abstract class Player {
 	}
 	
 	/**
-	 * この getMonster() と 次の getItem() は、ほぼ同じ内容である。
-	 * とすると、リフレクションを使って、両方ができるメソッドを
-	 * 作成できるのではなかろうか？
+	 * この場所のオブジェクトをMonster型にもどす
+	 * @param places
+	 * @return
 	 */
 	public Monster getMonster(Place[][] places) {
 		Object o = places[y][x].getObj();
@@ -50,6 +64,11 @@ public abstract class Player {
 		return null;
 	}
 	
+	/**
+	 * この場所のオブジェクトをItem型にもどす
+	 * @param places
+	 * @return
+	 */
 	public Item getItem(Place[][] places) {
 		Object o = places[y][x].getObj();
 		if (o instanceof Item) {
@@ -57,7 +76,13 @@ public abstract class Player {
 		} 
 		return null;
 	}
-		
+	
+	/**
+	 * "y"か"n"かを選択させる。
+	 * "y"ならtrue。
+	 * @param msg
+	 * @return
+	 */
 	public boolean selectYorN(String msg) {
 		System.out.print(msg);
 		String c = new Scanner(System.in).nextLine().toLowerCase();
@@ -67,7 +92,10 @@ public abstract class Player {
 		return false;
 	}
 	
-	public void gameover() {
+	/**
+	 * このdie()メソッドは子クラスのCharacterクラスから呼ばれる。
+	 */
+	public void die() {
 		System.out.println("GAME OVER");
 		this.life = false;
 	}
@@ -76,6 +104,12 @@ public abstract class Player {
 		return selectYorN(Message.SELECT_FIGHT);
 	}
 
+	/**
+	 * fight()メソッドはCharacterクラスで実装。
+	 * このクラスで抽象メソッドとしておくことで、
+	 * このクラスでfight()メソッドを呼ぶことができる。
+	 * @param m
+	 */
 	public abstract void fight(Monster m);
 
 	public boolean isTake() {
