@@ -1,9 +1,0 @@
-練習 3-2
-X (A) if (cost = 300 * 1.05) {}
-X (B) if (3) {}
-O (C) if (age != 30) {}
-O (D) while (true) {}
-O (E) if (b + 5 < 20) {}
-X (F) if (isNumeric = true) {}
-   
-  
